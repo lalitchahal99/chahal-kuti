@@ -1,9 +1,7 @@
 
 const lang=document.body.dataset.lang;
 fetch('../content.json').then(r=>r.json()).then(d=>{
-document.querySelectorAll('[data-key]').forEach(el=>{
-el.textContent=d[lang][el.dataset.key];
-});
+document.querySelectorAll('[data-key]').forEach(el=>{el.textContent=d[lang][el.dataset.key];});
 });
 fetch('../gallery.json').then(r=>r.json()).then(d=>{
 const g=document.getElementById('gallery');
